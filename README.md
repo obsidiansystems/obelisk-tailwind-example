@@ -60,7 +60,7 @@ module.exports = {
     enabled: true,
     content: ['./frontend/**/*.hs']
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {},
   },
@@ -183,3 +183,7 @@ Static assets built and symlinked to static.out
 That's also where you'll see errors related to the compilation of static files.
 
 Note that changing frontend files doesn't have to, in principle, cause a rebuild of the static files. In our case it does because we're using the Tailwind CSS purge functionality.
+
+***
+
+Thanks to Emre Can for the [photo used in this example](https://www.pexels.com/photo/architectural-photography-of-obelisk-2079658/).
