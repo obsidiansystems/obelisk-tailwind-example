@@ -34,7 +34,8 @@ Here's a `packages.json` specifying our dependencies, including tailwindcss, the
     "autoprefixer": "^9.8.5",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.5.1"
+    "tailwindcss": "^1.5.1",
+    "cssnano": "^4.1.10"
   }
 }
 ```
@@ -48,6 +49,7 @@ module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
+    cssnano: {}
   }
 }
 ```
