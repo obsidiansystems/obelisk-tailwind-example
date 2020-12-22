@@ -2,7 +2,10 @@
 let
   # The nixified node project was generated from a package.json file in src using node2nix
   # See https://github.com/svanderburg/node2nix#using-the-nodejs-environment-in-other-nix-derivations
-  nodePkgs = (pkgs.callPackage ./src {}).shell.nodeDependencies;
+  nodePkgs = (pkgs.callPackage ./src {
+    inherit pkgs;
+    nodejs = pkgs.nodejs-12_x;
+  }).shell.nodeDependencies;
   
   # The frontend source files have to be passed in so that tailwind's purge option works
   # See https://tailwindcss.com/docs/optimizing-for-production#removing-unused-css

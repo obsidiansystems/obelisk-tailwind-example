@@ -4,13 +4,40 @@
 
 let
   sources = {
-    "@fullhuman/postcss-purgecss-2.3.0" = {
+    "@babel/code-frame-7.12.11" = {
+      name = "_at_babel_slash_code-frame";
+      packageName = "@babel/code-frame";
+      version = "7.12.11";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.12.11.tgz";
+        sha512 = "Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==";
+      };
+    };
+    "@babel/helper-validator-identifier-7.12.11" = {
+      name = "_at_babel_slash_helper-validator-identifier";
+      packageName = "@babel/helper-validator-identifier";
+      version = "7.12.11";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.12.11.tgz";
+        sha512 = "np/lG3uARFybkoHokJUmf1QfEvRVCPbmQeUQpKow5cQ3xWrV9i3rUHodKDJPQfTVX61qKi+UdYk8kik84n7XOw==";
+      };
+    };
+    "@babel/highlight-7.10.4" = {
+      name = "_at_babel_slash_highlight";
+      packageName = "@babel/highlight";
+      version = "7.10.4";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@babel/highlight/-/highlight-7.10.4.tgz";
+        sha512 = "i6rgnR/YgPEQzZZnbTHHuZdlE8qyoBNalD6F+q4vAFlcMEcqmkoG+mPqJYJCo63qPf74+Y1UZsl3l6f7/RIkmA==";
+      };
+    };
+    "@fullhuman/postcss-purgecss-3.1.3" = {
       name = "_at_fullhuman_slash_postcss-purgecss";
       packageName = "@fullhuman/postcss-purgecss";
-      version = "2.3.0";
+      version = "3.1.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.3.0.tgz";
-        sha512 = "qnKm5dIOyPGJ70kPZ5jiz0I9foVOic0j+cOzNDoo8KoCf6HjicIZ99UfO2OmE7vCYSKAAepEwJtNzpiiZAh9xw==";
+        url = "https://registry.npmjs.org/@fullhuman/postcss-purgecss/-/postcss-purgecss-3.1.3.tgz";
+        sha512 = "kwOXw8fZ0Lt1QmeOOrd+o4Ibvp4UTEBFQbzvWldjlKv5n+G9sXfIPn1hh63IQIL8K8vbvv1oYMJiIUbuy9bGaA==";
       };
     };
     "@nodelib/fs.scandir-2.1.3" = {
@@ -58,13 +85,22 @@ let
         sha512 = "aPgMH+CjQiScLZculoDNOQUrrK2ktkbl3D6uCLYp1jgYRlNDrMONu9nMu8LfwAeetYNpVNeIGx7WzHSu0kvECg==";
       };
     };
-    "@tailwindcss/ui-0.4.0" = {
+    "@tailwindcss/ui-0.7.2" = {
       name = "_at_tailwindcss_slash_ui";
       packageName = "@tailwindcss/ui";
-      version = "0.4.0";
+      version = "0.7.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@tailwindcss/ui/-/ui-0.4.0.tgz";
-        sha512 = "aUDxTamhTx3EKsjj1jo+p8aIh8akHt1uUQ4ezB2b/Mms3AkDpK4GwtAkeFt4SXcRqkXAoVPwemrhfIebDXVjSw==";
+        url = "https://registry.npmjs.org/@tailwindcss/ui/-/ui-0.7.2.tgz";
+        sha512 = "7HuFoWUMfVdY8EWEIS2FSJBCj+iEWL4JfljVE6Wd5qLrQrCzH10tuE0S6697jPm7dt8ZUEslFWlJtAsU76A5Nw==";
+      };
+    };
+    "@types/parse-json-4.0.0" = {
+      name = "_at_types_slash_parse-json";
+      packageName = "@types/parse-json";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz";
+        sha512 = "//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==";
       };
     };
     "@types/q-1.5.4" = {
@@ -175,13 +211,13 @@ let
         sha512 = "+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==";
       };
     };
-    "autoprefixer-9.8.6" = {
+    "autoprefixer-10.1.0" = {
       name = "autoprefixer";
       packageName = "autoprefixer";
-      version = "9.8.6";
+      version = "10.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/autoprefixer/-/autoprefixer-9.8.6.tgz";
-        sha512 = "XrvP4VVHdRBCdX1S3WXVD8+RyG9qeb1D5Sn1DeLiG2xfSpzellk5k54xbUERJ3M5DggQxes39UGOTP8CFrEGbg==";
+        url = "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.1.0.tgz";
+        sha512 = "0/lBNwN+ZUnb5su18NZo5MBIjDaq6boQKZcxwy86Gip/CmXA2zZqUoFQLCNAGI5P25ZWSP2RWdhDJ8osfKEjoQ==";
       };
     };
     "balanced-match-1.0.0" = {
@@ -283,13 +319,13 @@ let
         sha1 = "06eb84f00eea413da86affefacbffb36093b3c50";
       };
     };
-    "camelcase-5.3.1" = {
-      name = "camelcase";
-      packageName = "camelcase";
-      version = "5.3.1";
+    "callsites-3.1.0" = {
+      name = "callsites";
+      packageName = "callsites";
+      version = "3.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz";
-        sha512 = "L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==";
+        url = "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz";
+        sha512 = "P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==";
       };
     };
     "camelcase-css-2.0.1" = {
@@ -346,13 +382,13 @@ let
         sha512 = "DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==";
       };
     };
-    "cliui-6.0.0" = {
+    "cliui-7.0.4" = {
       name = "cliui";
       packageName = "cliui";
-      version = "6.0.0";
+      version = "7.0.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/cliui/-/cliui-6.0.0.tgz";
-        sha512 = "t6wbgtoCXvAzst7QgXxJYqPt0usEfbgQdftEPbLL/cvv6HPE5VgvqCuAIDR0NgU52ds6rFwqrgakNLrHEjCbrQ==";
+        url = "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz";
+        sha512 = "OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==";
       };
     };
     "coa-2.0.2" = {
@@ -427,13 +463,13 @@ let
         sha512 = "puCDz0CzydiSYOrnXpz/PKd69zRrribezjtE9yd4zvytoRc8+RY/KJPvtPFKZS3E3wP6neGyMe0vOTlHO5L3Pw==";
       };
     };
-    "commander-5.1.0" = {
+    "commander-6.2.1" = {
       name = "commander";
       packageName = "commander";
-      version = "5.1.0";
+      version = "6.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/commander/-/commander-5.1.0.tgz";
-        sha512 = "P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==";
+        url = "https://registry.npmjs.org/commander/-/commander-6.2.1.tgz";
+        sha512 = "U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==";
       };
     };
     "concat-map-0.0.1" = {
@@ -452,6 +488,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-5.2.1.tgz";
         sha512 = "H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==";
+      };
+    };
+    "cosmiconfig-7.0.0" = {
+      name = "cosmiconfig";
+      packageName = "cosmiconfig";
+      version = "7.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-7.0.0.tgz";
+        sha512 = "pondGvTuVYDk++upghXJabWzL6Kxu6f26ljFw64Swq9v6sQPUL3EUlVDV56diOjpCayKihL6hVe8exIACU4XcA==";
       };
     };
     "css-color-names-0.0.4" = {
@@ -598,15 +643,6 @@ let
         sha512 = "wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==";
       };
     };
-    "decamelize-1.2.0" = {
-      name = "decamelize";
-      packageName = "decamelize";
-      version = "1.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz";
-        sha1 = "f6534d15148269b20352e7bee26f501f9a191290";
-      };
-    };
     "define-properties-1.1.3" = {
       name = "define-properties";
       packageName = "define-properties";
@@ -641,6 +677,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/detective/-/detective-5.2.0.tgz";
         sha512 = "6SsIx+nUUbuK0EthKjv0zrdnajCCXVYGmbYYiYjFVpzcjwEs/JMDZ8tPRG29J/HhN56t3GJp2cGSWDRjjot8Pg==";
+      };
+    };
+    "didyoumean-1.2.1" = {
+      name = "didyoumean";
+      packageName = "didyoumean";
+      version = "1.2.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.1.tgz";
+        sha1 = "e92edfdada6537d484d73c0172fd1eba0c4976ff";
       };
     };
     "dir-glob-3.0.1" = {
@@ -697,13 +742,13 @@ let
         sha512 = "QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==";
       };
     };
-    "electron-to-chromium-1.3.629" = {
+    "electron-to-chromium-1.3.630" = {
       name = "electron-to-chromium";
       packageName = "electron-to-chromium";
-      version = "1.3.629";
+      version = "1.3.630";
       src = fetchurl {
-        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.629.tgz";
-        sha512 = "iSPPJtPvHrMAvYOt+9cdbDmTasPqwnwz4lkP8Dn200gDNUBQOLQ96xUsWXBwXslAo5XxdoXAoQQ3RAy4uao9IQ==";
+        url = "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.630.tgz";
+        sha512 = "HSTsvqOrR3kWsoekKu0EOQXR/YOncKs3HAys9lysvIS2ec/mlfV1ZoLHSx00semK+PscVJwqcvBN4ayGPs++fA==";
       };
     };
     "emoji-regex-8.0.0" = {
@@ -814,22 +859,13 @@ let
         sha512 = "qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==";
       };
     };
-    "find-up-4.1.0" = {
-      name = "find-up";
-      packageName = "find-up";
-      version = "4.1.0";
+    "fraction.js-4.0.12" = {
+      name = "fraction.js";
+      packageName = "fraction.js";
+      version = "4.0.12";
       src = fetchurl {
-        url = "https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz";
-        sha512 = "PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==";
-      };
-    };
-    "fs-extra-8.1.0" = {
-      name = "fs-extra";
-      packageName = "fs-extra";
-      version = "8.1.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz";
-        sha512 = "yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==";
+        url = "https://registry.npmjs.org/fraction.js/-/fraction.js-4.0.12.tgz";
+        sha512 = "8Z1K0VTG4hzYY7kA/1sj4/r1/RWLBD3xwReT/RCrUCbzPszjNQCCsy3ktkU/eaEqX3MYa4pY37a52eiBlPMlhA==";
       };
     };
     "fs-extra-9.0.1" = {
@@ -1030,13 +1066,13 @@ let
         sha512 = "BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==";
       };
     };
-    "import-cwd-2.1.0" = {
+    "import-cwd-3.0.0" = {
       name = "import-cwd";
       packageName = "import-cwd";
-      version = "2.1.0";
+      version = "3.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/import-cwd/-/import-cwd-2.1.0.tgz";
-        sha1 = "aa6cf36e722761285cb371ec6519f53e2435b0a9";
+        url = "https://registry.npmjs.org/import-cwd/-/import-cwd-3.0.0.tgz";
+        sha512 = "4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==";
       };
     };
     "import-fresh-2.0.0" = {
@@ -1048,13 +1084,22 @@ let
         sha1 = "d81355c15612d386c61f9ddd3922d4304822a546";
       };
     };
-    "import-from-2.1.0" = {
+    "import-fresh-3.3.0" = {
+      name = "import-fresh";
+      packageName = "import-fresh";
+      version = "3.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz";
+        sha512 = "veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==";
+      };
+    };
+    "import-from-3.0.0" = {
       name = "import-from";
       packageName = "import-from";
-      version = "2.1.0";
+      version = "3.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/import-from/-/import-from-2.1.0.tgz";
-        sha1 = "335db7f2a7affd53aaa471d4b8021dee36b7f3b1";
+        url = "https://registry.npmjs.org/import-from/-/import-from-3.0.0.tgz";
+        sha512 = "CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==";
       };
     };
     "indexes-of-1.0.1" = {
@@ -1255,6 +1300,15 @@ let
         sha512 = "OwijhaRSgqvhm/0ZdAcXNZt9lYdKFpcRDT5ULUuYXPoT794UNOdU+gpT6Rzo7b4V2HUl/op6GqY894AZwv9faQ==";
       };
     };
+    "js-tokens-4.0.0" = {
+      name = "js-tokens";
+      packageName = "js-tokens";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz";
+        sha512 = "RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==";
+      };
+    };
     "js-yaml-3.14.1" = {
       name = "js-yaml";
       packageName = "js-yaml";
@@ -1273,13 +1327,13 @@ let
         sha512 = "mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==";
       };
     };
-    "jsonfile-4.0.0" = {
-      name = "jsonfile";
-      packageName = "jsonfile";
-      version = "4.0.0";
+    "json-parse-even-better-errors-2.3.1" = {
+      name = "json-parse-even-better-errors";
+      packageName = "json-parse-even-better-errors";
+      version = "2.3.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz";
-        sha1 = "8771aae0799b64076b76640fca058f9c10e33ecb";
+        url = "https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz";
+        sha512 = "xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==";
       };
     };
     "jsonfile-6.1.0" = {
@@ -1291,13 +1345,13 @@ let
         sha512 = "5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==";
       };
     };
-    "locate-path-5.0.0" = {
-      name = "locate-path";
-      packageName = "locate-path";
-      version = "5.0.0";
+    "lines-and-columns-1.1.6" = {
+      name = "lines-and-columns";
+      packageName = "lines-and-columns";
+      version = "1.1.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz";
-        sha512 = "t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==";
+        url = "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz";
+        sha1 = "1c00c743b433cd0a4e80758f7b64a57440d9ff00";
       };
     };
     "lodash-4.17.20" = {
@@ -1309,6 +1363,42 @@ let
         sha512 = "PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==";
       };
     };
+    "lodash.difference-4.5.0" = {
+      name = "lodash.difference";
+      packageName = "lodash.difference";
+      version = "4.5.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lodash.difference/-/lodash.difference-4.5.0.tgz";
+        sha1 = "9ccb4e505d486b91651345772885a2df27fd017c";
+      };
+    };
+    "lodash.forown-4.4.0" = {
+      name = "lodash.forown";
+      packageName = "lodash.forown";
+      version = "4.4.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lodash.forown/-/lodash.forown-4.4.0.tgz";
+        sha1 = "85115cf04f73ef966eced52511d3893cc46683af";
+      };
+    };
+    "lodash.get-4.4.2" = {
+      name = "lodash.get";
+      packageName = "lodash.get";
+      version = "4.4.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lodash.get/-/lodash.get-4.4.2.tgz";
+        sha1 = "2d177f652fa31e939b4438d5341499dfa3825e99";
+      };
+    };
+    "lodash.groupby-4.6.0" = {
+      name = "lodash.groupby";
+      packageName = "lodash.groupby";
+      version = "4.6.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lodash.groupby/-/lodash.groupby-4.6.0.tgz";
+        sha1 = "0b08a1dcf68397c397855c3239783832df7403d1";
+      };
+    };
     "lodash.memoize-4.1.2" = {
       name = "lodash.memoize";
       packageName = "lodash.memoize";
@@ -1316,6 +1406,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz";
         sha1 = "bcc6c49a42a2840ed997f323eada5ecd182e0bfe";
+      };
+    };
+    "lodash.sortby-4.7.0" = {
+      name = "lodash.sortby";
+      packageName = "lodash.sortby";
+      version = "4.7.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz";
+        sha1 = "edd14c824e2cc9c1e0b0a1b42bb5210516a42438";
       };
     };
     "lodash.toarray-4.4.0" = {
@@ -1334,15 +1433,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz";
         sha1 = "d0225373aeb652adc1bc82e4945339a842754773";
-      };
-    };
-    "log-symbols-2.2.0" = {
-      name = "log-symbols";
-      packageName = "log-symbols";
-      version = "2.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/log-symbols/-/log-symbols-2.2.0.tgz";
-        sha512 = "VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg==";
       };
     };
     "mdn-data-2.0.14" = {
@@ -1417,6 +1507,24 @@ let
         sha512 = "NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==";
       };
     };
+    "modern-normalize-1.0.0" = {
+      name = "modern-normalize";
+      packageName = "modern-normalize";
+      version = "1.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/modern-normalize/-/modern-normalize-1.0.0.tgz";
+        sha512 = "1lM+BMLGuDfsdwf3rsgBSrxJwAZHFIrQ8YR61xIqdHo0uNKI9M52wNpHSrliZATJp51On6JD0AfRxd4YGSU0lw==";
+      };
+    };
+    "nanoid-3.1.20" = {
+      name = "nanoid";
+      packageName = "nanoid";
+      version = "3.1.20";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/nanoid/-/nanoid-3.1.20.tgz";
+        sha512 = "a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==";
+      };
+    };
     "node-emoji-1.10.0" = {
       name = "node-emoji";
       packageName = "node-emoji";
@@ -1462,15 +1570,6 @@ let
         sha512 = "U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==";
       };
     };
-    "normalize.css-8.0.1" = {
-      name = "normalize.css";
-      packageName = "normalize.css";
-      version = "8.0.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/normalize.css/-/normalize.css-8.0.1.tgz";
-        sha512 = "qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==";
-      };
-    };
     "nth-check-1.0.2" = {
       name = "nth-check";
       packageName = "nth-check";
@@ -1478,15 +1577,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/nth-check/-/nth-check-1.0.2.tgz";
         sha512 = "WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==";
-      };
-    };
-    "num2fraction-1.2.2" = {
-      name = "num2fraction";
-      packageName = "num2fraction";
-      version = "1.2.2";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz";
-        sha1 = "6f682b6a027a4e9ddfa4564cd2589d1d4e669ede";
       };
     };
     "object-assign-4.1.1" = {
@@ -1561,31 +1651,13 @@ let
         sha1 = "583b1aa775961d4b113ac17d9c50baef9dd76bd1";
       };
     };
-    "p-limit-2.3.0" = {
-      name = "p-limit";
-      packageName = "p-limit";
-      version = "2.3.0";
+    "parent-module-1.0.1" = {
+      name = "parent-module";
+      packageName = "parent-module";
+      version = "1.0.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz";
-        sha512 = "//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==";
-      };
-    };
-    "p-locate-4.1.0" = {
-      name = "p-locate";
-      packageName = "p-locate";
-      version = "4.1.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/p-locate/-/p-locate-4.1.0.tgz";
-        sha512 = "R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==";
-      };
-    };
-    "p-try-2.2.0" = {
-      name = "p-try";
-      packageName = "p-try";
-      version = "2.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz";
-        sha512 = "R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==";
+        url = "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz";
+        sha512 = "GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==";
       };
     };
     "parse-json-4.0.0" = {
@@ -1597,13 +1669,13 @@ let
         sha1 = "be35f5425be1f7f6c747184f98a788cb99477ee0";
       };
     };
-    "path-exists-4.0.0" = {
-      name = "path-exists";
-      packageName = "path-exists";
-      version = "4.0.0";
+    "parse-json-5.1.0" = {
+      name = "parse-json";
+      packageName = "parse-json";
+      version = "5.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz";
-        sha512 = "ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==";
+        url = "https://registry.npmjs.org/parse-json/-/parse-json-5.1.0.tgz";
+        sha512 = "+mi/lmVVNKFNVyLXV31ERiy2CY5E1/F6QtJFEzoChPRwwngMNXRDQ9GJ5WdE2Z2P4AujsOi0/+2qHID68KwfIQ==";
       };
     };
     "path-is-absolute-1.0.1" = {
@@ -1660,15 +1732,6 @@ let
         sha512 = "soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==";
       };
     };
-    "postcss-7.0.32" = {
-      name = "postcss";
-      packageName = "postcss";
-      version = "7.0.32";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/postcss/-/postcss-7.0.32.tgz";
-        sha512 = "03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==";
-      };
-    };
     "postcss-7.0.35" = {
       name = "postcss";
       packageName = "postcss";
@@ -1676,6 +1739,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/postcss/-/postcss-7.0.35.tgz";
         sha512 = "3QT8bBJeX/S5zKTTjTCIjRF3If4avAT6kqxcASlTWEtAFCb9NH0OUxNDfgZSWdP5fJnBYCMEWkIFfWeugjzYMg==";
+      };
+    };
+    "postcss-8.2.1" = {
+      name = "postcss";
+      packageName = "postcss";
+      version = "8.2.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/postcss/-/postcss-8.2.1.tgz";
+        sha512 = "RhsqOOAQzTgh1UB/IZdca7F9WDb7SUCR2Vnv1x7DbvuuggQIpoDwjK+q0rzoPffhYvWNKX5JSwS4so4K3UC6vA==";
       };
     };
     "postcss-calc-7.0.5" = {
@@ -1687,13 +1759,13 @@ let
         sha512 = "1tKHutbGtLtEZF6PT4JSihCHfIVldU72mZ8SdZHIYriIZ9fh9k9aWSppaT8rHsyI3dX+KSR+W+Ix9BMY3AODrg==";
       };
     };
-    "postcss-cli-7.1.2" = {
+    "postcss-cli-8.3.1" = {
       name = "postcss-cli";
       packageName = "postcss-cli";
-      version = "7.1.2";
+      version = "8.3.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/postcss-cli/-/postcss-cli-7.1.2.tgz";
-        sha512 = "3mlEmN1v2NVuosMWZM2tP8bgZn7rO5PYxRRrXtdSyL5KipcgBDjJ9ct8/LKxImMCJJi3x5nYhCGFJOkGyEqXBQ==";
+        url = "https://registry.npmjs.org/postcss-cli/-/postcss-cli-8.3.1.tgz";
+        sha512 = "leHXsQRq89S3JC9zw/tKyiVV2jAhnfQe0J8VI4eQQbUjwIe0XxVqLrR+7UsahF1s9wi4GlqP6SJ8ydf44cgF2Q==";
       };
     };
     "postcss-colormin-4.0.3" = {
@@ -1759,31 +1831,31 @@ let
         sha1 = "0e94d01444700a481de20de4d55fb2640564250e";
       };
     };
-    "postcss-import-12.0.1" = {
+    "postcss-import-14.0.0" = {
       name = "postcss-import";
       packageName = "postcss-import";
-      version = "12.0.1";
+      version = "14.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/postcss-import/-/postcss-import-12.0.1.tgz";
-        sha512 = "3Gti33dmCjyKBgimqGxL3vcV8w9+bsHwO5UrBawp796+jdardbcFl4RP5w/76BwNL7aGzpKstIfF9I+kdE8pTw==";
+        url = "https://registry.npmjs.org/postcss-import/-/postcss-import-14.0.0.tgz";
+        sha512 = "gFDDzXhqr9ELmnLHgCC3TbGfA6Dm/YMb/UN8/f7Uuq4fL7VTk2vOIj6hwINEwbokEmp123bLD7a5m+E+KIetRg==";
       };
     };
-    "postcss-js-2.0.3" = {
+    "postcss-js-3.0.3" = {
       name = "postcss-js";
       packageName = "postcss-js";
-      version = "2.0.3";
+      version = "3.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/postcss-js/-/postcss-js-2.0.3.tgz";
-        sha512 = "zS59pAk3deu6dVHyrGqmC3oDXBdNdajk4k1RyxeVXCrcEDBUBHoIhE4QTsmhxgzXxsaqFDAkUZfmMa5f/N/79w==";
+        url = "https://registry.npmjs.org/postcss-js/-/postcss-js-3.0.3.tgz";
+        sha512 = "gWnoWQXKFw65Hk/mi2+WTQTHdPD5UJdDXZmX073EY/B3BWnYjO4F4t0VneTCnCGQ5E5GsCdMkzPaTXwl3r5dJw==";
       };
     };
-    "postcss-load-config-2.1.2" = {
+    "postcss-load-config-3.0.0" = {
       name = "postcss-load-config";
       packageName = "postcss-load-config";
-      version = "2.1.2";
+      version = "3.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-2.1.2.tgz";
-        sha512 = "/rDeGV6vMUo3mwJZmeHfEDvwnTKKqQ0S7OHUi/kJvvtx3aWtyWG2/0ZWnzCt2keEclwN6Tf0DST2v9kITdOKYw==";
+        url = "https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-3.0.0.tgz";
+        sha512 = "lErrN8imuEF1cSiHBV8MiR7HeuzlDpCGNtaMyYHlOBuJHHOGw6S4xOMZp8BbXPr7AGQp14L6PZDlIOpfFJ6f7w==";
       };
     };
     "postcss-merge-longhand-4.0.11" = {
@@ -1840,13 +1912,13 @@ let
         sha512 = "D5S1iViljXBj9kflQo4YutWnJmwm8VvIsU1GeXJGiG9j8CIg9zs4voPMdQDUmIxetUOh60VilsNzCiAFTOqu3g==";
       };
     };
-    "postcss-nested-4.2.3" = {
+    "postcss-nested-5.0.3" = {
       name = "postcss-nested";
       packageName = "postcss-nested";
-      version = "4.2.3";
+      version = "5.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/postcss-nested/-/postcss-nested-4.2.3.tgz";
-        sha512 = "rOv0W1HquRCamWy2kFl3QazJMMe1ku6rCFoAAH+9AcxdbpDeBr6k968MLWuLjvjMcGEip01ak09hKOEgpK9hvw==";
+        url = "https://registry.npmjs.org/postcss-nested/-/postcss-nested-5.0.3.tgz";
+        sha512 = "R2LHPw+u5hFfDgJG748KpGbJyTv7Yr33/2tIMWxquYuHTd9EXu27PYnKi7BxMXLtzKC0a0WVsqHtd7qIluQu/g==";
       };
     };
     "postcss-normalize-charset-4.0.1" = {
@@ -1957,13 +2029,13 @@ let
         sha512 = "EEVig1Q2QJ4ELpJXMZR8Vt5DQx8/mo+dGWSR7vWXqcob2gQLyQGsionYcGKATXvQzMPn6DSN1vTN7yFximdIAg==";
       };
     };
-    "postcss-reporter-6.0.1" = {
+    "postcss-reporter-7.0.2" = {
       name = "postcss-reporter";
       packageName = "postcss-reporter";
-      version = "6.0.1";
+      version = "7.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/postcss-reporter/-/postcss-reporter-6.0.1.tgz";
-        sha512 = "LpmQjfRWyabc+fRygxZjpRxfhRf9u/fdlKf4VHG4TSPbV2XNsuISzYW1KL+1aQzx53CAppa1bKG4APIB/DOXXw==";
+        url = "https://registry.npmjs.org/postcss-reporter/-/postcss-reporter-7.0.2.tgz";
+        sha512 = "JyQ96NTQQsso42y6L1H1RqHfWH1C3Jr0pt91mVv5IdYddZAE9DUZxuferNgk6q0o6vBVOrfVJb10X1FgDzjmDw==";
       };
     };
     "postcss-selector-parser-3.1.2" = {
@@ -2029,13 +2101,13 @@ let
         sha1 = "b7e3ea42435a4c9b2759d99e0f201eb195802ee1";
       };
     };
-    "purgecss-2.3.0" = {
+    "purgecss-3.1.3" = {
       name = "purgecss";
       packageName = "purgecss";
-      version = "2.3.0";
+      version = "3.1.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/purgecss/-/purgecss-2.3.0.tgz";
-        sha512 = "BE5CROfVGsx2XIhxGuZAT7rTH9lLeQx/6M0P7DTXQH4IUc3BBzs9JUzt4yzGf3JrH9enkeq6YJBe9CTtkm1WmQ==";
+        url = "https://registry.npmjs.org/purgecss/-/purgecss-3.1.3.tgz";
+        sha512 = "hRSLN9mguJ2lzlIQtW4qmPS2kh6oMnA9RxdIYK8sz18QYqd6ePp4GNDl18oWHA1f2v2NEQIh51CO8s/E3YGckQ==";
       };
     };
     "q-1.5.1" = {
@@ -2083,15 +2155,6 @@ let
         sha1 = "8c64ad5fd30dab1c976e2344ffe7f792a6a6df42";
       };
     };
-    "require-main-filename-2.0.0" = {
-      name = "require-main-filename";
-      packageName = "require-main-filename";
-      version = "2.0.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/require-main-filename/-/require-main-filename-2.0.0.tgz";
-        sha512 = "NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==";
-      };
-    };
     "resolve-1.19.0" = {
       name = "resolve";
       packageName = "resolve";
@@ -2108,6 +2171,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/resolve-from/-/resolve-from-3.0.0.tgz";
         sha1 = "b22c7af7d9d6881bc8b6e653335eebcb0a188748";
+      };
+    };
+    "resolve-from-4.0.0" = {
+      name = "resolve-from";
+      packageName = "resolve-from";
+      version = "4.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz";
+        sha512 = "pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==";
+      };
+    };
+    "resolve-from-5.0.0" = {
+      name = "resolve-from";
+      packageName = "resolve-from";
+      version = "5.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/resolve-from/-/resolve-from-5.0.0.tgz";
+        sha512 = "qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==";
       };
     };
     "reusify-1.0.4" = {
@@ -2153,15 +2234,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz";
         sha512 = "NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==";
-      };
-    };
-    "set-blocking-2.0.0" = {
-      name = "set-blocking";
-      packageName = "set-blocking";
-      version = "2.0.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz";
-        sha1 = "045f9782d011ae9a6803ddd382b24392b3d890f7";
       };
     };
     "simple-swizzle-0.2.2" = {
@@ -2290,13 +2362,13 @@ let
         sha512 = "yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==";
       };
     };
-    "tailwindcss-1.9.6" = {
+    "tailwindcss-2.0.2" = {
       name = "tailwindcss";
       packageName = "tailwindcss";
-      version = "1.9.6";
+      version = "2.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/tailwindcss/-/tailwindcss-1.9.6.tgz";
-        sha512 = "nY8WYM/RLPqGsPEGEV2z63riyQPcHYZUJpAwdyBzVpxQHOHqHE+F/fvbCeXhdF1+TA5l72vSkZrtYCB9hRcwkQ==";
+        url = "https://registry.npmjs.org/tailwindcss/-/tailwindcss-2.0.2.tgz";
+        sha512 = "nO9JRE1pO7SF9RnYAl6g7uzeHdrmKAFqNjT9NtZUfxqimJZAOOLOEyIEUiMq12+xIc7mC2Ey3Vf90XjHpWKfbw==";
       };
     };
     "timsort-0.3.0" = {
@@ -2342,15 +2414,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/uniqs/-/uniqs-2.0.0.tgz";
         sha1 = "ffede4b36b25290696e6e165d4a59edb998e6b02";
-      };
-    };
-    "universalify-0.1.2" = {
-      name = "universalify";
-      packageName = "universalify";
-      version = "0.1.2";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz";
-        sha512 = "rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==";
       };
     };
     "universalify-1.0.0" = {
@@ -2407,22 +2470,13 @@ let
         sha512 = "/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==";
       };
     };
-    "which-module-2.0.0" = {
-      name = "which-module";
-      packageName = "which-module";
-      version = "2.0.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz";
-        sha1 = "d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a";
-      };
-    };
-    "wrap-ansi-6.2.0" = {
+    "wrap-ansi-7.0.0" = {
       name = "wrap-ansi";
       packageName = "wrap-ansi";
-      version = "6.2.0";
+      version = "7.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz";
-        sha512 = "r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==";
+        url = "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz";
+        sha512 = "YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==";
       };
     };
     "wrappy-1.0.2" = {
@@ -2443,31 +2497,40 @@ let
         sha512 = "LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==";
       };
     };
-    "y18n-4.0.1" = {
+    "y18n-5.0.5" = {
       name = "y18n";
       packageName = "y18n";
-      version = "4.0.1";
+      version = "5.0.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/y18n/-/y18n-4.0.1.tgz";
-        sha512 = "wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==";
+        url = "https://registry.npmjs.org/y18n/-/y18n-5.0.5.tgz";
+        sha512 = "hsRUr4FFrvhhRH12wOdfs38Gy7k2FFzB9qgN9v3aLykRq0dRcdcpz5C9FxdS2NuhOrI/628b/KSTJ3rwHysYSg==";
       };
     };
-    "yargs-15.4.1" = {
+    "yaml-1.10.0" = {
+      name = "yaml";
+      packageName = "yaml";
+      version = "1.10.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/yaml/-/yaml-1.10.0.tgz";
+        sha512 = "yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==";
+      };
+    };
+    "yargs-16.2.0" = {
       name = "yargs";
       packageName = "yargs";
-      version = "15.4.1";
+      version = "16.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz";
-        sha512 = "aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==";
+        url = "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz";
+        sha512 = "D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==";
       };
     };
-    "yargs-parser-18.1.3" = {
+    "yargs-parser-20.2.4" = {
       name = "yargs-parser";
       packageName = "yargs-parser";
-      version = "18.1.3";
+      version = "20.2.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/yargs-parser/-/yargs-parser-18.1.3.tgz";
-        sha512 = "o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ==";
+        url = "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.4.tgz";
+        sha512 = "WOkpgNhPTlE73h4VFAFsOnomJVaovO8VqLDzy5saChRBFQFBoMYirowyW+Q9HB4HFF4Z7VZTiG3iSzJJA29yRA==";
       };
     };
   };
@@ -2477,29 +2540,38 @@ let
     version = "0.0.0";
     src = ./.;
     dependencies = [
-      (sources."@fullhuman/postcss-purgecss-2.3.0" // {
+      sources."@babel/code-frame-7.12.11"
+      sources."@babel/helper-validator-identifier-7.12.11"
+      (sources."@babel/highlight-7.10.4" // {
         dependencies = [
-          sources."postcss-7.0.32"
+          sources."ansi-styles-3.2.1"
+          sources."chalk-2.4.2"
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."supports-color-5.5.0"
         ];
       })
+      sources."@fullhuman/postcss-purgecss-3.1.3"
       sources."@nodelib/fs.scandir-2.1.3"
       sources."@nodelib/fs.stat-2.0.3"
       sources."@nodelib/fs.walk-1.2.4"
       sources."@tailwindcss/custom-forms-0.2.1"
       sources."@tailwindcss/typography-0.2.0"
-      sources."@tailwindcss/ui-0.4.0"
+      sources."@tailwindcss/ui-0.7.2"
+      sources."@types/parse-json-4.0.0"
       sources."@types/q-1.5.4"
       sources."acorn-7.4.1"
       sources."acorn-node-1.8.2"
       sources."acorn-walk-7.2.0"
       sources."alphanum-sort-1.0.2"
       sources."ansi-regex-5.0.0"
-      sources."ansi-styles-3.2.1"
+      sources."ansi-styles-4.3.0"
       sources."anymatch-3.1.1"
       sources."argparse-1.0.10"
       sources."array-union-2.1.0"
       sources."at-least-node-1.0.0"
-      sources."autoprefixer-9.8.6"
+      sources."autoprefixer-10.1.0"
       sources."balanced-match-1.0.0"
       sources."binary-extensions-2.1.0"
       sources."boolbase-1.0.0"
@@ -2508,42 +2580,115 @@ let
       sources."browserslist-4.16.0"
       sources."bytes-3.1.0"
       sources."call-bind-1.0.0"
-      sources."caller-callsite-2.0.0"
+      (sources."caller-callsite-2.0.0" // {
+        dependencies = [
+          sources."callsites-2.0.0"
+        ];
+      })
       sources."caller-path-2.0.0"
-      sources."callsites-2.0.0"
-      sources."camelcase-5.3.1"
+      sources."callsites-3.1.0"
       sources."camelcase-css-2.0.1"
       sources."caniuse-api-3.0.0"
       sources."caniuse-lite-1.0.30001170"
-      (sources."chalk-2.4.2" // {
+      sources."chalk-4.1.0"
+      sources."chokidar-3.4.3"
+      sources."cliui-7.0.4"
+      (sources."coa-2.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          sources."chalk-2.4.2"
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
           sources."supports-color-5.5.0"
         ];
       })
-      sources."chokidar-3.4.3"
-      sources."cliui-6.0.0"
-      sources."coa-2.0.2"
-      sources."color-3.1.3"
-      sources."color-convert-1.9.3"
-      sources."color-name-1.1.3"
+      (sources."color-3.1.3" // {
+        dependencies = [
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+        ];
+      })
+      sources."color-convert-2.0.1"
+      sources."color-name-1.1.4"
       sources."color-string-1.5.4"
       sources."colorette-1.2.1"
-      sources."commander-5.1.0"
+      sources."commander-6.2.1"
       sources."concat-map-0.0.1"
-      sources."cosmiconfig-5.2.1"
+      sources."cosmiconfig-7.0.0"
       sources."css-color-names-0.0.4"
-      sources."css-declaration-sorter-4.0.1"
+      (sources."css-declaration-sorter-4.0.1" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       sources."css-select-2.1.0"
       sources."css-select-base-adapter-0.1.1"
       sources."css-tree-1.0.0-alpha.37"
       sources."css-unit-converter-1.1.2"
       sources."css-what-3.4.2"
       sources."cssesc-3.0.0"
-      sources."cssnano-4.1.10"
-      sources."cssnano-preset-default-4.0.7"
+      (sources."cssnano-4.1.10" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."cosmiconfig-5.2.1"
+          sources."has-flag-3.0.0"
+          sources."import-fresh-2.0.0"
+          sources."parse-json-4.0.0"
+          sources."postcss-7.0.35"
+          sources."resolve-from-3.0.0"
+          sources."supports-color-6.1.0"
+        ];
+      })
+      (sources."cssnano-preset-default-4.0.7" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       sources."cssnano-util-get-arguments-4.0.0"
       sources."cssnano-util-get-match-4.0.0"
-      sources."cssnano-util-raw-cache-4.0.1"
+      (sources."cssnano-util-raw-cache-4.0.1" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       sources."cssnano-util-same-parent-4.0.1"
       (sources."csso-4.2.0" // {
         dependencies = [
@@ -2551,11 +2696,11 @@ let
           sources."mdn-data-2.0.14"
         ];
       })
-      sources."decamelize-1.2.0"
       sources."define-properties-1.1.3"
       sources."defined-1.0.0"
       sources."dependency-graph-0.9.0"
       sources."detective-5.2.0"
+      sources."didyoumean-1.2.1"
       sources."dir-glob-3.0.1"
       (sources."dom-serializer-0.2.2" // {
         dependencies = [
@@ -2565,7 +2710,7 @@ let
       sources."domelementtype-1.3.1"
       sources."domutils-1.7.0"
       sources."dot-prop-5.3.0"
-      sources."electron-to-chromium-1.3.629"
+      sources."electron-to-chromium-1.3.630"
       sources."emoji-regex-8.0.0"
       sources."entities-2.1.0"
       sources."error-ex-1.3.2"
@@ -2577,7 +2722,7 @@ let
       sources."fast-glob-3.2.4"
       sources."fastq-1.10.0"
       sources."fill-range-7.0.1"
-      sources."find-up-4.1.0"
+      sources."fraction.js-4.0.12"
       sources."fs-extra-9.0.1"
       sources."fs.realpath-1.0.0"
       sources."fsevents-2.1.3"
@@ -2590,7 +2735,7 @@ let
       sources."globby-11.0.1"
       sources."graceful-fs-4.2.4"
       sources."has-1.0.3"
-      sources."has-flag-3.0.0"
+      sources."has-flag-4.0.0"
       sources."has-symbols-1.0.1"
       sources."hex-color-regex-1.1.0"
       sources."hex-rgb-4.2.0"
@@ -2599,9 +2744,13 @@ let
       sources."html-comment-regex-1.1.2"
       sources."html-tags-3.1.0"
       sources."ignore-5.1.8"
-      sources."import-cwd-2.1.0"
-      sources."import-fresh-2.0.0"
-      sources."import-from-2.1.0"
+      sources."import-cwd-3.0.0"
+      sources."import-fresh-3.3.0"
+      (sources."import-from-3.0.0" // {
+        dependencies = [
+          sources."resolve-from-5.0.0"
+        ];
+      })
       sources."indexes-of-1.0.1"
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
@@ -2623,19 +2772,25 @@ let
       sources."is-resolvable-1.1.0"
       sources."is-svg-3.0.0"
       sources."is-symbol-1.0.3"
+      sources."js-tokens-4.0.0"
       sources."js-yaml-3.14.1"
       sources."json-parse-better-errors-1.0.2"
+      sources."json-parse-even-better-errors-2.3.1"
       (sources."jsonfile-6.1.0" // {
         dependencies = [
           sources."universalify-2.0.0"
         ];
       })
-      sources."locate-path-5.0.0"
+      sources."lines-and-columns-1.1.6"
       sources."lodash-4.17.20"
+      sources."lodash.difference-4.5.0"
+      sources."lodash.forown-4.4.0"
+      sources."lodash.get-4.4.2"
+      sources."lodash.groupby-4.6.0"
       sources."lodash.memoize-4.1.2"
+      sources."lodash.sortby-4.7.0"
       sources."lodash.toarray-4.4.0"
       sources."lodash.uniq-4.5.0"
-      sources."log-symbols-2.2.0"
       sources."mdn-data-2.0.4"
       sources."merge2-1.4.1"
       sources."micromatch-4.0.2"
@@ -2643,14 +2798,14 @@ let
       sources."minimatch-3.0.4"
       sources."minimist-1.2.5"
       sources."mkdirp-0.5.5"
+      sources."modern-normalize-1.0.0"
+      sources."nanoid-3.1.20"
       sources."node-emoji-1.10.0"
       sources."node-releases-1.1.67"
       sources."normalize-path-3.0.0"
       sources."normalize-range-0.1.2"
       sources."normalize-url-3.3.0"
-      sources."normalize.css-8.0.1"
       sources."nth-check-1.0.2"
-      sources."num2fraction-1.2.2"
       sources."object-assign-4.1.1"
       sources."object-hash-2.0.3"
       sources."object-inspect-1.9.0"
@@ -2659,154 +2814,460 @@ let
       sources."object.getownpropertydescriptors-2.1.1"
       sources."object.values-1.1.2"
       sources."once-1.4.0"
-      sources."p-limit-2.3.0"
-      sources."p-locate-4.1.0"
-      sources."p-try-2.2.0"
-      sources."parse-json-4.0.0"
-      sources."path-exists-4.0.0"
+      sources."parent-module-1.0.1"
+      sources."parse-json-5.1.0"
       sources."path-is-absolute-1.0.1"
       sources."path-parse-1.0.6"
       sources."path-type-4.0.0"
       sources."picomatch-2.2.2"
       sources."pify-2.3.0"
-      sources."postcss-7.0.35"
-      sources."postcss-calc-7.0.5"
-      (sources."postcss-cli-7.1.2" // {
+      sources."postcss-8.2.1"
+      (sources."postcss-calc-7.0.5" // {
         dependencies = [
-          sources."ansi-styles-4.3.0"
-          sources."chalk-4.1.0"
-          sources."color-convert-2.0.1"
-          sources."color-name-1.1.4"
-          sources."has-flag-4.0.0"
-          sources."supports-color-7.2.0"
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
         ];
       })
+      sources."postcss-cli-8.3.1"
       (sources."postcss-colormin-4.0.3" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-convert-values-4.0.1" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
-      sources."postcss-discard-comments-4.0.2"
-      sources."postcss-discard-duplicates-4.0.2"
-      sources."postcss-discard-empty-4.0.1"
-      sources."postcss-discard-overridden-4.0.1"
+      (sources."postcss-discard-comments-4.0.2" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
+      (sources."postcss-discard-duplicates-4.0.2" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
+      (sources."postcss-discard-empty-4.0.1" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
+      (sources."postcss-discard-overridden-4.0.1" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       (sources."postcss-functions-3.0.0" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          sources."chalk-2.4.2"
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
           sources."postcss-6.0.23"
           sources."postcss-value-parser-3.3.1"
           sources."supports-color-5.5.0"
         ];
       })
-      (sources."postcss-import-12.0.1" // {
-        dependencies = [
-          sources."postcss-value-parser-3.3.1"
-        ];
-      })
-      sources."postcss-js-2.0.3"
-      sources."postcss-load-config-2.1.2"
+      sources."postcss-import-14.0.0"
+      sources."postcss-js-3.0.3"
+      sources."postcss-load-config-3.0.0"
       (sources."postcss-merge-longhand-4.0.11" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-merge-rules-4.0.3" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-selector-parser-3.1.2"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-minify-font-values-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-minify-gradients-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-minify-params-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-minify-selectors-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-selector-parser-3.1.2"
+          sources."supports-color-6.1.0"
         ];
       })
-      sources."postcss-nested-4.2.3"
-      sources."postcss-normalize-charset-4.0.1"
+      sources."postcss-nested-5.0.3"
+      (sources."postcss-normalize-charset-4.0.1" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       (sources."postcss-normalize-display-values-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-positions-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-repeat-style-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-string-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-timing-functions-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-unicode-4.0.1" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-url-4.0.1" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-normalize-whitespace-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
       (sources."postcss-ordered-values-4.1.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
-      sources."postcss-reduce-initial-4.0.3"
+      (sources."postcss-reduce-initial-4.0.3" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       (sources."postcss-reduce-transforms-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
-      sources."postcss-reporter-6.0.1"
+      sources."postcss-reporter-7.0.2"
       sources."postcss-selector-parser-6.0.4"
       (sources."postcss-svgo-4.0.2" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-value-parser-3.3.1"
+          sources."supports-color-6.1.0"
         ];
       })
-      sources."postcss-unique-selectors-4.0.1"
+      (sources."postcss-unique-selectors-4.0.1" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
+          sources."supports-color-6.1.0"
+        ];
+      })
       sources."postcss-value-parser-4.1.0"
       sources."pretty-hrtime-1.0.3"
-      (sources."purgecss-2.3.0" // {
-        dependencies = [
-          sources."postcss-7.0.32"
-        ];
-      })
+      sources."purgecss-3.1.3"
       sources."q-1.5.1"
       sources."read-cache-1.0.0"
       sources."readdirp-3.5.0"
@@ -2816,15 +3277,13 @@ let
         ];
       })
       sources."require-directory-2.1.1"
-      sources."require-main-filename-2.0.0"
       sources."resolve-1.19.0"
-      sources."resolve-from-3.0.0"
+      sources."resolve-from-4.0.0"
       sources."reusify-1.0.4"
       sources."rgb-regex-1.0.1"
       sources."rgba-regex-1.0.0"
       sources."run-parallel-1.1.10"
       sources."sax-1.2.4"
-      sources."set-blocking-2.0.0"
       (sources."simple-swizzle-0.2.2" // {
         dependencies = [
           sources."is-arrayish-0.3.2"
@@ -2840,24 +3299,32 @@ let
       sources."strip-ansi-6.0.0"
       (sources."stylehacks-4.0.3" // {
         dependencies = [
+          sources."ansi-styles-3.2.1"
+          (sources."chalk-2.4.2" // {
+            dependencies = [
+              sources."supports-color-5.5.0"
+            ];
+          })
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."postcss-7.0.35"
           sources."postcss-selector-parser-3.1.2"
+          sources."supports-color-6.1.0"
         ];
       })
-      sources."supports-color-6.1.0"
-      sources."svgo-1.3.2"
-      (sources."tailwindcss-1.9.6" // {
+      sources."supports-color-7.2.0"
+      (sources."svgo-1.3.2" // {
         dependencies = [
-          sources."ansi-styles-4.3.0"
-          sources."chalk-4.1.0"
-          sources."color-convert-2.0.1"
-          sources."color-name-1.1.4"
-          sources."fs-extra-8.1.0"
-          sources."has-flag-4.0.0"
-          sources."jsonfile-4.0.0"
-          sources."supports-color-7.2.0"
-          sources."universalify-0.1.2"
+          sources."ansi-styles-3.2.1"
+          sources."chalk-2.4.2"
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."has-flag-3.0.0"
+          sources."supports-color-5.5.0"
         ];
       })
+      sources."tailwindcss-2.0.2"
       sources."timsort-0.3.0"
       sources."to-regex-range-5.0.1"
       sources."traverse-0.6.6"
@@ -2872,19 +3339,13 @@ let
         ];
       })
       sources."vendors-1.0.4"
-      sources."which-module-2.0.0"
-      (sources."wrap-ansi-6.2.0" // {
-        dependencies = [
-          sources."ansi-styles-4.3.0"
-          sources."color-convert-2.0.1"
-          sources."color-name-1.1.4"
-        ];
-      })
+      sources."wrap-ansi-7.0.0"
       sources."wrappy-1.0.2"
       sources."xtend-4.0.2"
-      sources."y18n-4.0.1"
-      sources."yargs-15.4.1"
-      sources."yargs-parser-18.1.3"
+      sources."y18n-5.0.5"
+      sources."yaml-1.10.0"
+      sources."yargs-16.2.0"
+      sources."yargs-parser-20.2.4"
     ];
     buildInputs = globalBuildInputs;
     meta = {
