@@ -30,12 +30,13 @@ Here's a `packages.json` specifying our dependencies, including tailwindcss, the
   "version": "0.0.0",
   "author": "Obsidian Systems, LLC",
   "dependencies": {
-    "@tailwindcss/ui": "^0.4.0",
-    "autoprefixer": "^9.8.5",
-    "postcss-cli": "^7.1.1",
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.5.1",
-    "cssnano": "^4.1.10"
+    "@tailwindcss/ui": "^0.7.2",
+    "autoprefixer": "^10.4.4",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.23",
+    "@tailwindcss/typography": "^0.5.2",
+    "cssnano": "^5.1.5"
   }
 }
 ```
@@ -60,11 +61,7 @@ Next, we'll write a basic tailwind configuration file (`tailwind.config.js`):
 
 ```javascript
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./frontend/**/*.hs']
-  },
-  darkMode: false,
+  content: ['./frontend/**/*.hs'],
   theme: {
     extend: {},
   },
