@@ -62,7 +62,7 @@ home = elClass "div" "min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 
 
   -- Footer
   elClass "footer" "bg-slate-800 text-slate-200 text-center py-4 mt-auto" $ do
-    text "© 2025 Obelisk — Made with Reflex-Dom & TailwindCSS"
+    text "❤️ Made with reflex-dom & TailwindCSS"
 
 featureCard
   :: DomBuilder t m
