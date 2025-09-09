@@ -4,32 +4,34 @@ let
   # See https://github.com/svanderburg/node2nix#using-the-nodejs-environment-in-other-nix-derivations
   nodePkgs = (pkgs.callPackage ./src {
     inherit pkgs;
-    nodejs = pkgs.nodejs-12_x;
+    nodejs = pkgs.nodejs-18_x;
   }).shell.nodeDependencies;
-  
+
+  nixpkgs = import ./src/nixpkgs.nix {};
+
   # The frontend source files have to be passed in so that tailwind's purge option works
   # See https://tailwindcss.com/docs/optimizing-for-production#removing-unused-css
   frontendSrcFiles = ../frontend;
-  
+
 in pkgs.stdenv.mkDerivation {
   name = "static";
   src = ./src;
-  buildInputs = [pkgs.nodejs];
+  buildInputs = [pkgs.nodejs nixpkgs.tailwindcss_4];
   installPhase = ''
     mkdir -p $out/css
     mkdir -p $out/images
-    
+
     # Setting up the node environment:
     ln -s ${nodePkgs}/lib/node_modules ./node_modules
     export PATH="${nodePkgs}/bin:$PATH"
-    
+
     # We make the frontend haskell source files available here:
     # This corresponds to the path specified in tailwind.config.js
     ln -s ${frontendSrcFiles} frontend
-    
-    # Run the postcss compiler:
-    postcss css/styles.css -o $out/styles.css
-    
+
+    # Run the tailwindcss compiler:
+    tailwindcss -i css/styles.css -o $out/styles.css
+
     # We can write other commands to produce more static files as well:
     cp -r images/* $out/images/
   '';

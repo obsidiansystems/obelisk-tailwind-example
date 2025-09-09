@@ -5,13 +5,13 @@ _Using modern css tooling with Obelisk._
 
 ![obelisk in action](ob-tailwind.gif)
 
-This repository is an example of how one can use Obelisk with a css processor/compiler. We're specifically going to be setting up PostCSS and Tailwind CSS.
+This repository is an example of how one can use Obelisk with a css processor/compiler. We're specifically going to be setting up the tailwindcss CLI tool and Tailwind CSS.
 
-We'll be putting together a nix expression that runs the postcss compiler with the tailwind plugin on our input css file. This nix expression will be supplied to our Obelisk application as the generator for our application's static files. As we modify our application (code or stylesheets), Obelisk's `ob run` command will automatically regenerate the static assets when needed.
+We'll be putting together a nix expression that runs the tailwindcss compiler with the tailwind plugin on our input css file. This nix expression will be supplied to our Obelisk application as the generator for our application's static files. As we modify our application (code or stylesheets), Obelisk's `ob run` command will automatically regenerate the static assets when needed.
 
 ## Setting up the node project
 
-We'll set up a simple Tailwind/PostCSS project, as described [here](https://tailwindcss.com/docs/installation#installing-tailwind-css-as-a-post-css-plugin).
+We'll set up a simple Tailwind-CLI project, as described [here](https://tailwindcss.com/docs/installation/tailwind-cli).
 
 First, let's create a folder `static/src` in our Obelisk project:
 
@@ -22,7 +22,7 @@ cd static/src
 
 ### `package.json`
 
-Here's a `packages.json` specifying our dependencies, including tailwindcss, the tailwind ui plugin, and the autoprefixer postcss plugin:
+Here's a `package.json` specifying our dependencies, including tailwindcss, the tailwind ui plugin, and the autoprefixer postcss plugin:
 
 ```json
 {
@@ -30,26 +30,7 @@ Here's a `packages.json` specifying our dependencies, including tailwindcss, the
   "version": "0.0.0",
   "author": "Obsidian Systems, LLC",
   "dependencies": {
-    "@tailwindcss/ui": "^0.4.0",
-    "autoprefixer": "^9.8.5",
-    "postcss-cli": "^7.1.1",
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.5.1",
-    "cssnano": "^4.1.10"
-  }
-}
-```
-
-### `postcss.config.js`
-
-We'll also create a simple PostCSS configuration file (`postcss.config.js`):
-
-```javascript
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-    cssnano: {}
+    "tailwindcss": "4.1.13"
   }
 }
 ```
@@ -73,16 +54,14 @@ module.exports = {
 }
 ```
 
-Note that the tailwind file refers to `./frontend/**/*.hs`: tailwind will read the our frontend haskell source files looking for references to tailwind classes so that it can purge unneeded classes from the generated CSS. However, for this to work, we'll have to provide 
+Note that the tailwind file refers to `./frontend/**/*.hs`: tailwind will read the our frontend haskell source files looking for references to tailwind classes so that it can purge unneeded classes from the generated CSS.
 
 ### `styles.css`
 
 Finally, we'll write a basic tailwind stylesheet:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 ### Nix-ifying the node project
@@ -91,23 +70,7 @@ We'll use the `node2nix` command to generate nix expressions for our node projec
 
 ```bash
 cd static/src
-nix-shell -p nodePackages.node2nix --run node2nix
-```
-
-This repository also includes a `node2nix.nix` file, in case the version of nixpkgs you're using doesn't include node2nix.
-
-```nix
-(import (builtins.fetchTarball {
-   name = "nixpkgs-unstable_2020-11-18";
-   url = "https://github.com/nixos/nixpkgs/archive/4f3475b113c93d204992838aecafa89b1b3ccfde.tar.gz";
-   sha256 = "158iik656ds6i6pc672w54cnph4d44d0a218dkq6npzrbhd3vvbg";
- }) {}).nodePackages.node2nix
-```
-
-You can use `node2nix.nix` by running:
-
-```bash
-$(nix-build node2nix.nix)/bin/node2nix
+$(nix-build node2nix.nix)/bin/node2nix -18 -d --include-peer-dependencies
 ```
 
 node2nix will generate a few different nix files. You won't have to re-run node2nix unless you change the contents of `package.json`.
@@ -123,31 +86,36 @@ We'll put this code in `static/default.nix`:
 let
   # The nixified node project was generated from a package.json file in src using node2nix
   # See https://github.com/svanderburg/node2nix#using-the-nodejs-environment-in-other-nix-derivations
-  nodePkgs = (pkgs.callPackage ./src {}).shell.nodeDependencies;
-  
+  nodePkgs = (pkgs.callPackage ./src {
+    inherit pkgs;
+    nodejs = pkgs.nodejs-18_x;
+  }).shell.nodeDependencies;
+
+  nixpkgs = import ./src/nixpkgs.nix {};
+
   # The frontend source files have to be passed in so that tailwind's purge option works
   # See https://tailwindcss.com/docs/optimizing-for-production#removing-unused-css
   frontendSrcFiles = ../frontend;
-  
+
 in pkgs.stdenv.mkDerivation {
   name = "static";
   src = ./src;
-  buildInputs = [pkgs.nodejs];
+  buildInputs = [pkgs.nodejs nixpkgs.tailwindcss_4];
   installPhase = ''
     mkdir -p $out/css
     mkdir -p $out/images
-    
+
     # Setting up the node environment:
     ln -s ${nodePkgs}/lib/node_modules ./node_modules
     export PATH="${nodePkgs}/bin:$PATH"
-    
+
     # We make the frontend haskell source files available here:
     # This corresponds to the path specified in tailwind.config.js
     ln -s ${frontendSrcFiles} frontend
-    
-    # Run the postcss compiler:
-    postcss css/styles.css -o $out/styles.css
-    
+
+    # Run the tailwindcss compiler:
+    tailwindcss -i css/styles.css -o $out/styles.css
+
     # We can write other commands to produce more static files as well:
     cp -r images/* $out/images/
   '';
