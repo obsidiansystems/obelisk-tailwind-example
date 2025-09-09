@@ -7,6 +7,8 @@ _Using modern css tooling with Obelisk._
 
 This repository is an example of how one can use Obelisk with a css processor/compiler. We're specifically going to be setting up the tailwindcss CLI tool and Tailwind CSS.
 
+![Example Obelisk Page with Tailwind](./screenshot_on_2025-09-08-21-42-41.png)
+
 We'll be putting together a nix expression that runs the tailwindcss compiler with the tailwind plugin on our input css file. This nix expression will be supplied to our Obelisk application as the generator for our application's static files. As we modify our application (code or stylesheets), Obelisk's `ob run` command will automatically regenerate the static assets when needed.
 
 ## Setting up the node project
