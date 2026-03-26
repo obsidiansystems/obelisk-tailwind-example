@@ -1,12 +1,5 @@
-{ pkgs }:
+{ pkgs ? (import ../.obelisk/impl {}).nixpkgs }:
 let
-  # The nixified node project was generated from a package.json file in src using node2nix
-  # See https://github.com/svanderburg/node2nix#using-the-nodejs-environment-in-other-nix-derivations
-  nodePkgs = (pkgs.callPackage ./src {
-    inherit pkgs;
-    nodejs = pkgs.nodejs-18_x;
-  }).shell.nodeDependencies;
-
   nixpkgs = import ./src/nixpkgs.nix {};
 
   # The frontend source files have to be passed in so that tailwind's purge option works
@@ -20,10 +13,6 @@ in pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out/css
     mkdir -p $out/images
-
-    # Setting up the node environment:
-    ln -s ${nodePkgs}/lib/node_modules ./node_modules
-    export PATH="${nodePkgs}/bin:$PATH"
 
     # We make the frontend haskell source files available here:
     # This corresponds to the path specified in tailwind.config.js
