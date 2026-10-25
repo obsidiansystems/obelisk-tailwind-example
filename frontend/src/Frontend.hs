@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE TypeApplications #-}
 
 module Frontend where
 
@@ -17,7 +17,7 @@ frontend = Frontend
   { _frontend_head = do
       elAttr "meta" ("charset" =: "UTF-8") blank
       elAttr "meta" ("name" =: "viewport" <> "contents" =: "width=device-width, initial-scale=1.0") blank
-      elAttr "link" ("href" =: $(static "styles.css") <> "type" =: "text/css" <> "rel" =: "stylesheet") blank
+      elAttr "link" ("href" =: static @"styles.css" <> "type" =: "text/css" <> "rel" =: "stylesheet") blank
   , _frontend_body = home
   }
 
@@ -28,7 +28,7 @@ home = elClass "div" "min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 
     elClass "div" "flex items-center space-x-2" $ do
       elAttr "img"
         ( "class" =: "h-8 w-8 rounded-full"
-        <> "src"   =: $(static "images/obelisk.jpg")
+        <> "src"   =: static @"images/obelisk.jpg"
         <> "alt"   =: "Obelisk logo"
         ) blank
       elClass "span" "text-xl font-bold text-slate-800" $ text "Obelisk"
