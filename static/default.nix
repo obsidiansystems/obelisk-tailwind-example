@@ -1,22 +1,21 @@
-{ pkgs ? (import ../.obelisk/impl {}).nixpkgs }:
+{ pkgs ? (import ./src/nixpkgs.nix) {} }:
 let
-  nixpkgs = import ./src/nixpkgs.nix {};
+  tailwindPkgs = import ./src/nixpkgs.nix {};
+in
 
-  # The frontend source files have to be passed in so that tailwind's purge option works
-  # See https://tailwindcss.com/docs/optimizing-for-production#removing-unused-css
-  frontendSrcFiles = ../frontend;
-
-in pkgs.stdenv.mkDerivation {
+# Static assets derivation.
+# Add build steps here (e.g. postcss, tailwind, sass).
+pkgs.stdenv.mkDerivation {
   name = "static";
   src = ./src;
-  buildInputs = [pkgs.nodejs nixpkgs.tailwindcss_4];
+  buildInputs = [pkgs.nodejs tailwindPkgs.tailwindcss_4];
   installPhase = ''
     mkdir -p $out/css
     mkdir -p $out/images
 
     # We make the frontend haskell source files available here:
     # This corresponds to the path specified in tailwind.config.js
-    ln -s ${frontendSrcFiles} frontend
+    ln -s ${../frontend} frontend
 
     # Run the tailwindcss compiler:
     tailwindcss -i css/styles.css -o $out/styles.css

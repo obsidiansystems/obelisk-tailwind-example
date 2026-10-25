@@ -1,15 +1,147 @@
-name: common
-version: 0.1
-cabal-version: >= 1.2
-build-type: Simple
+cabal-version:      3.4
+name:               common
+version:            0.1.0.0
+build-type:         Simple
+
+flag strict
+  description: Build with options, such as -Werror, which are inconvenient for development but good for CI
+  default: False
+  manual: True
+
+common common
+  default-language: GHC2024
+
+  default-extensions:
+      GHC2024
+      --
+    , AllowAmbiguousTypes
+    , ApplicativeDo
+    , Arrows
+    , BangPatterns
+    , BinaryLiterals
+    , BlockArguments
+    , ConstrainedClassMethods
+    , ConstraintKinds
+    , DataKinds
+    , DefaultSignatures
+    , DeriveDataTypeable
+    , DeriveFoldable
+    , DeriveFunctor
+    , DeriveGeneric
+    , DeriveLift
+    , DeriveTraversable
+    , DerivingStrategies
+    , DerivingVia
+    , DisambiguateRecordFields
+    , DoAndIfThenElse
+    , DuplicateRecordFields
+    , EmptyCase
+    , EmptyDataDecls
+    , EmptyDataDeriving
+    , ExistentialQuantification
+    , ExplicitForAll
+    , ExplicitNamespaces
+    , ExtendedDefaultRules
+    , FlexibleContexts
+    , FlexibleInstances
+    , FunctionalDependencies
+    , GADTs
+    , GeneralizedNewtypeDeriving
+    , HexFloatLiterals
+    , ImportQualifiedPost
+    , ImpredicativeTypes
+    , InstanceSigs
+    , KindSignatures
+    , LambdaCase
+    , LexicalNegation
+    , LiberalTypeSynonyms
+    , MonadComprehensions
+    , MultilineStrings
+    , MultiParamTypeClasses
+    , MultiWayIf
+    , NamedDefaults
+    , NegativeLiterals
+    , NoDeriveAnyClass
+    , NoNamedFieldPuns
+    , NoRecordWildCards
+    , NumericUnderscores
+    , OrPatterns
+    , OverloadedLabels
+    , OverloadedLists
+    , OverloadedRecordDot
+    , OverloadedStrings
+    , PackageImports
+    , ParallelListComp
+    , PartialTypeSignatures
+    , PatternGuards
+    , PatternSynonyms
+    , PolyKinds
+    , PostfixOperators
+    , QualifiedDo
+    , QuantifiedConstraints
+    , QuasiQuotes
+    , RankNTypes
+    , RecursiveDo
+    , RequiredTypeArguments
+    , RoleAnnotations
+    , ScopedTypeVariables
+    , StandaloneDeriving
+    , StandaloneKindSignatures
+    , TemplateHaskell
+    , TemplateHaskellQuotes
+    , TransformListComp
+    , TupleSections
+    , TypeApplications
+    , TypeData
+    , TypeFamilies
+    , TypeFamilyDependencies
+    , TypeOperators
+    , TypeSynonymInstances
+    , UndecidableInstances
+    , UnicodeSyntax
+    , ViewPatterns
+
+  if flag(strict)
+    ghc-options:  -Werror
+                  -Wunused-packages
+
+  ghc-options:    -O2
+                  -fexpose-all-unfoldings
+                  -fspecialise
+                  -fspecialise-aggressively
+                  -flate-specialise
+                  -fcross-module-specialise
+
+  ghc-options:    -Wall
+                  -Wno-type-defaults
+                  -Wno-partial-type-signatures
+                  -Wincomplete-record-updates -Werror=incomplete-record-updates
+                  -Wincomplete-patterns -Werror=incomplete-patterns
+                  -Wincomplete-uni-patterns -Werror=incomplete-uni-patterns
+                  -Wpartial-fields -Werror=partial-fields
+                  -Wmissing-fields -Werror=missing-fields
+                  -Widentities
+                  -Wredundant-constraints
+                  -Wunused-packages
+
+  if impl(ghc >= 8.8)
+    ghc-options:
+                  -Wmissing-deriving-strategies
+                  -Werror=missing-deriving-strategies
+
+  if !(arch(wasm32))
+    ghc-options:  -threaded -rtsopts -with-rtsopts=-N
 
 library
-  hs-source-dirs: src
-  build-depends: base
-               , obelisk-route
-               , mtl
-               , text
-  exposed-modules:
-    Common.Api
-    Common.Route
-  ghc-options: -Wall -Wredundant-constraints -Wincomplete-uni-patterns -Wincomplete-record-updates -O -fno-show-valid-hole-fits
+    import:           common
+
+    exposed-modules:  Common
+                      Common.Api
+                      Common.Route
+
+    build-depends:    base
+                      --
+                    , obelisk-route
+                    , text
+
+    hs-source-dirs:   src
